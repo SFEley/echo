@@ -1,6 +1,11 @@
 = echo
 
-Description goes here.
+Echo is a test double for API interactions that learns from the real API. In
+its simplest use case, it extends Net::HTTP and tracks every HTTP call to a
+registered domain. If it hasn't seen that call, it stores both the request and
+the response. On subsequent calls it returns the stored response. Explicit
+scenario start/end markers are also supported for more complex multiple-step
+interactions.
 
 == Note on Patches/Pull Requests
  
@@ -10,7 +15,7 @@ Description goes here.
   future version unintentionally.
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but
-   bump version in a commit by itself I can ignore when I pull)
+  bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
 == Copyright
